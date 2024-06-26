@@ -1,0 +1,179 @@
+progress/regress tracker
+
+unplanned bugs:
+no tc/castle build limits
+cant switch research (wf for v0.1)
+just having a market should lower trade rate (wf for v0.1)
+
+planned features (v0.1):
+guide how to play
+readme
+release on github
+release on itch (win+linux)
+release on zjikra (link to gh)
+
+extra (future versions):
+travel animation
+doc (blueprints/map) creation
+rustdoc everything
+lobby can start from savegames (just load the board no?)
+replay
+discoverablity: layout every menu choice and enable the only ones that can be pressed
+peak lookahead ai tuning
+menu ui rewrite
+act refactor simplify code
+board refactor simplify code
+ai arena for testing/finding parameters
+ui apply relevant bonuses to base stats
+ui map editor
+clap setup game by command line
+map generator
+blueprint randomizer
+2d sprites and bevy version
+ui themes
+ui move log
+neutral units
+walls
+ships
+no rng (market all units up, specific ruins, monk does convert damage)
+better library
+
+empire maps:
+x moats [20x20] 2p
+x riverlands [32x32] 4p
+x canals [24x24] 4p
+x black forest [32x30] 4p
+x archipelago small [18x18] 4p
+x twin peaks [23x26] 4p
+x high pass [18x18] 2p
+x crossroads [26x24] 4p
+x archipelago [26x26] 4p
+x scar [22x22] 2p
+x nippon [38x38] 2p
+x corner kingdoms [34x34] 4p
+x oasis [20x16] 4p
+x bridges [25x23] 2p
+x britannia [30x36] 4p
+x ring [24x24] 4p
+x arabia [32x34] 4p
+x mongol steppes [29x29] 4p
+x germania [28x28] 4p
+x bridge [20x20] 2p
+
+bonus maps:
+agincourt (set piece)
+archipelago large
+asia major
+bridges large
+castles
+swamplands
+hannibal crossing (set piece)
+hastings (set piece)
+khyber pass (set piece)
+king of the mountain
+outremer
+skirmish - plains (set piece)
+skirmish - desert (set piece)
+valley
+
+bonus units:
+dopple handers
+welsh bowmen
+mons meg
+knights of the round (table?)
+genoese crossbowmen
+swiss pikemen
+dark ram
+war wolf
+
+
+fog: 
+problem with undo:
+1. undo and normal exploration allows for seeing and then undo the move
+2. no undo when exploration is active
+3. undo and exploration is updated only at the end of the day
+4. undo and no fog (spies is useless)
+problem with machine:
+1. machine has to undo in order to think
+2. machine does the turn without considering units out of sight
+
+
+
+release v0.1 (first release)
+
+fixes:
+x cannot move over buildings
+x ui defender always dead
+x research twice and undo twice refunds both (incorrect)
+x missing special civ units
+x game crashes when reading default resource cost/production
+x tile picker always picking top unit
+x NO_COLOR=1 cursor
+x killing a villager which is constructing doesn't halt construction
+x power battle bonus & bonus make Unit heavy. infer by powerid
+x castle civ specific
+x market should have also all special units
+x market overprice [0, 50]
+x archers at castle age become elite archers instead of remaining archers
+x can build castles on top of enemy units
+x bonuses that discounts should be clamped at zero
+x repair teleporting buildings
+x building veterancy? shouldn't
+x ageup but couldn't afford it
+x attacking a no move unit that moved causes counterattack
+x sort maps in map picker
+x couldn't build farm at the bottom edge of the map
+x crash attack:66:48
+x blinding faith not working (sight?)
+x cant repair
+x cant attack MaA
+x terrain sight bonus, bonus refactor
+x done units become gray
+
+features:
+x monk heal, convert, relic
+x pickup collectibles
+x relic dropping on death
+x unit merge
+x pickup terrain bonuses
+x repairing
+x terrain range bonuses
+x sight
+x heroes and powers
+x conversion at the end of turn
+x random effects (convert, terrain bonuses) at the end of turn
+x market unit randomization chosen at turn start
+x ui confirmation screen (age up, end day) like attack
+x ui research
+x save/load
+x civilizations
+x castle/wonder building
+x ui unit details
+x keybinds
+x ui hide map color
+x button to jump to next available unit
+x win conditions
+x train limit = min(7, (gold income + food income)/100)
+x ai opponent
+x ui main menu
+x ui settings
+x act refactor
+x tracing
+x boulder ai tuning (non terrible)
+x client/server multiplayer
+x ui lobby machine presets
+x ui lobby
+x save/load saves from/to data folder
+x buildings should stop working when constraints are unsatisfied
+x capturing: tc, mills and mines capture nearby buildings if they are left uncaptured.
+x save/load config from data folder
+x ui pause menu (save, load, config, exit to main menu, quit)
+x load flow
+x cleanup dependencies
+x ui empire review
+x ui ageup
+x profiles (player name, symbol, color, fav civ on a file, lobby autofill)
+x ui blueprint library
+x hero place config in lobby
+x action shortcuts
+x fog mechanics(no undo with fog on)

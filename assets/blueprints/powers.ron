@@ -1,0 +1,119 @@
+[(
+    id: (0),
+    name: "Patron of the Arts",
+    require_on_building: Unit(Name("Town Center")),
+    effects: [TechDiscount((food: 50, gold: 50))],
+), (
+    id: (1),
+    name: "Nomadic Travelers",
+    targets: (status: Friendly, location: [Adjacent, Diagonal]),
+    bonus: (incr: (stats: (movement: 5))),
+), (
+    id: (2),
+    name: "Overwhelming Siege",
+    targets: (status: Friendly, location: [InSight]),
+    battle_bonus: (
+        require_opponent: Class(Bld), 
+        bonus: (perc: (stats: (attack: 33)))
+    ),
+), (
+    id: (3),
+    name: "Mongol Terror",
+    targets: (status: Enemy, location: [InSight]),
+    bonus: (perc: (stats: (defence: -25))),
+), (
+    id: (4),
+    name: "Inspiration",
+    targets: (status: Friendly, location: [This, Adjacent]),
+    effects: [Heal(20)],
+), (
+    id: (5),
+    name: "Divine Purpose",
+    targets: (status: Friendly, location: [All]),
+    effects: [Heal(5)],
+), (
+    // same as Mongol Terror, delete one?
+    id: (6),
+    name: "Blinding Faith",
+    targets: (status: Enemy, location: [InSight]),
+    bonus: (perc: (stats: (defence: -25))),
+), (
+    id: (7),
+    name: "Weakened Resolve",
+    targets: (status: Enemy, location: [Adjacent, Diagonal]),
+    effects: [Heal(-25)],
+), (
+    id: (8),
+    name: "Pillage",
+    targets: (status: Friendly, location: [All]),
+    battle_bonus: (
+        require_opponent: Or([
+            Unit(Name("Mill")), 
+            Unit(Name("Mine")), 
+            Unit(Name("Farm")), 
+        ]), 
+        bonus: (perc: (stats: (attack: 50)))
+    ),
+), (
+    id: (9),
+    name: "Warrior Code",
+    require_on_building: Unit(Name("Town Center")),
+    effects: [TrainDiscount((food: 20, gold: 20))],
+), (
+    id: (10),
+    name: "Minamoto's Guard",
+    targets: (status: Friendly, location: [Adjacent]),
+    bonus: (perc: (stats: (attack: 33, defence: 33))),
+), (
+    id: (11),
+    name: "Inspiring General",
+    targets: (status: Friendly, location: [This, Adjacent]),
+    effects: [Heal(15)],
+), (
+    id: (12),
+    name: "Reckless and Fierce",
+    targets: (status: Enemy, location: [Adjacent, Diagonal]),
+    effects: [Heal(20)],
+), (
+    id: (13),
+    name: "Superb Leader",
+    targets: (status: Friendly, location: [InSight]),
+    bonus: (perc: (stats: (attack: 25))),
+), (
+    // same as Warrior Code, delete one?
+    id: (14),
+    name: "Recruiting for the Cause",
+    require_on_building: Unit(Name("Town Center")),
+    effects: [TrainDiscount((food: 20, gold: 20))],
+), (
+    id: (15),
+    name: "Firing Line",
+    targets: (status: Friendly, location: [InSight]),
+    unit_bonus: (
+        affects: Class(Ran),
+        bonus: (incr: (stats: (range: 1))),
+    ),
+), (
+    id: (16),
+    name: "Benefactor",
+    require_on_building: Unit(Name("Town Center")),
+    effects: [ProduceResources((food: 0, gold: 100))]
+), (
+    id: (17),
+    name: "Rain of Arrows",
+    targets: (status: Friendly, location: [InSight]),
+    unit_bonus: (
+        affects: Class(Ran),
+        bonus: (perc: (stats: (attack: 33)))
+    ),
+), (
+    id: (18),
+    name: "Aura of Invincibility",
+    targets: (status: Friendly, location: [InSight]),
+    bonus: (perc: (stats: (defence: 33))),
+), (
+    id: (19),
+    name: "Hit and Run",
+    targets: (status: Friendly, location: [Adjacent]),
+    bonus: (incr: (stats: (movement: 2)), perc: (stats: (attack: 20))),
+)]

@@ -1,0 +1,28 @@
+[(
+    header: (id: (0), name: "Plains", glyph: "---"),
+    stats: (move_cost: 2, sight_cost: 2, range_bonus: 0, defence_bonus: 0, sight_bonus: 0),
+), (
+    header: (id: (1), name: "Mountain", glyph: "/\\\\"),
+    stats: (move_cost: 4, sight_cost: 4, range_bonus: 1, defence_bonus: 40, sight_bonus: 1),
+), (
+    header: (id: (2), name: "Forest", glyph: "###"),
+    stats: (move_cost: 3, sight_cost: 4, range_bonus: -1, defence_bonus: 20, sight_bonus: -1),
+), (
+    header: (id: (3), name: "Hills", glyph: "())"),
+    stats: (move_cost: 3, sight_cost: 4, range_bonus: 1, defence_bonus: 20, sight_bonus: 1),
+), (
+    header: (id: (4), name: "Water", glyph: "..."),
+    stats: (move_cost: 100, sight_cost: 2, range_bonus: 0, defence_bonus: 20, sight_bonus: 0),
+), (
+    header: (id: (5), name: "Bridge", glyph: "<>>"),
+    stats: (move_cost: 2, sight_cost: 2, range_bonus: 0, defence_bonus: 20, sight_bonus: 0),
+), (
+    header: (id: (6), name: "Swamp", glyph: "&&&"),
+    stats: (move_cost: 3, sight_cost: 2, range_bonus: -1, defence_bonus: 20, sight_bonus: -1),
+), (
+    header: (id: (7), name: "Desert", glyph: "~~~"),
+    stats: (move_cost: 2, sight_cost: 2, range_bonus: 0, defence_bonus: 0, sight_bonus: 0),
+), (
+    header: (id: (8), name: "Ford", glyph: ",,,"),
+    stats: (move_cost: 3, sight_cost: 2, range_bonus: 0, defence_bonus: 20, sight_bonus: 0),
+)]

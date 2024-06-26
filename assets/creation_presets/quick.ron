@@ -1,0 +1,18 @@
+(
+    //path: "assets/maps/archipelago_small.txt",
+    path: "assets/maps/test.txt",
+    players: [(
+        id: (0),
+        color: 0x00aa0000,
+        civilization: "Britons",
+        place_hero: true,
+        controller: Human,
+        level: 3,
+    ), (
+        id: (3),
+        color: 0x00ccffff,
+        civilization: "Saracens",
+        place_hero: true,
+        controller: Machine(WeakBoulder),
+    )]
+)

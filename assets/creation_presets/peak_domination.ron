@@ -1,0 +1,32 @@
+(
+    path: "assets/maps/corner_kingdoms.txt",
+    players: [(
+        id: (0),
+        color: 0x00ff9500,
+        civilization: "Britons",
+        place_hero: true,
+        controller: Machine(StrongPeak),
+        team: None,
+    ), (
+        id: (1),
+        color: 0x00ac0037,
+        civilization: "Mongols",
+        place_hero: true,
+        controller: Machine(StrongBoulder),
+        team: None,
+    ), (
+        id: (2),
+        color: 0x009fe26c,
+        civilization: "Franks",
+        place_hero: true,
+        controller: Machine(StrongBoulder),
+        team: None,
+    ), (
+        id: (3),
+        color: 0x003467cc,
+        civilization: "Japanese",
+        place_hero: true,
+        controller: Machine(StrongBoulder),
+        team: None,
+    )]
+)

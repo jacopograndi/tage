@@ -1,0 +1,566 @@
+[(
+    id: (0),
+    name: "Loom",
+    level: 0,
+    cost: (food: 50, gold: 150),
+    require: Unit(Name("Town Center")),
+    unit_bonuses: [(
+		affects: Unit(Name("Villager")),
+        bonus: (incr: (stats: (defence: 25)))
+    )]
+), (
+    id: (1),
+    name: "Town Scouts",
+    level: 0,
+    cost: (food: 50, gold: 150),
+    require: Unit(Name("Town Center")),
+    unit_bonuses: [(
+		affects: Unit(Name("Town Center")),
+    	bonus: (incr: (stats: (sight: 4)))
+    )]
+), (
+    id: (2),
+    name: "Leather Soles",
+    level: 0,
+    cost: (food: 50, gold: 150),
+    require: Unit(Name("Town Center")),
+    unit_bonuses: [(
+		affects: Unit(Name("Villager")),
+    	bonus: (incr: (stats: (movement: 1)))
+    )]
+), (
+    id: (3),
+    name: "Weaponsmith",
+    level: 0,
+    cost: (food: 50, gold: 150),
+    require: Unit(Name("Barracks")),
+    unit_bonuses: [(
+		affects: Unit(Name("Militia")),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (4),
+    name: "Town Watch",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Town Center")),
+    unit_bonuses: [(
+		affects: Unit(Name("Town Center")),
+    	bonus: (incr: (stats: (sight: 2)), perc: (stats: (defence: 20)))
+    )]
+), (
+    id: (5),
+    name: "Wheelbarrow",
+    level: 1,
+    cost: (food: 125, gold: 375),
+    require: Unit(Name("Town Center")),
+    unit_bonuses: [(
+		affects: Class(Bld),
+    	bonus: (perc: (resources: (cost: (food: -10, gold: -10))))
+    )]
+), (
+    id: (6),
+    name: "Advanced Mining",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Mine")),
+    unit_bonuses: [(
+		affects: Unit(Name("Mine")),
+    	bonus: (perc: (resources: (produces: (gold: 15))))
+    )]
+), (
+    id: (7),
+    name: "Horse Collar",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Mill")),
+    unit_bonuses: [(
+		affects: Unit(Name("Mill")),
+    	bonus: (perc: (resources: (produces: (food: 10), cost: (gold: 0))))
+    )]
+), (
+    id: (8),
+    name: "Scale Mail Armor",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Inf), Level(1)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (9),
+    name: "Scale Barding",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Cav), Level(1)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (10),
+    name: "Fletching",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Ran), Level(1)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (11),
+    name: "Padded Armor",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Ran), Level(1)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (12),
+    name: "Forging",
+    level: 1,
+    cost: (food: 155, gold: 470),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Or([Class(Inf), Class(Cav)]), Level(1)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (13),
+    name: "Tracking",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Market")),
+    unit_bonuses: [(
+		affects: Class(Inf),
+    	bonus: (incr: (stats: (sight: 2)))
+    )]
+), (
+    id: (14),
+    name: "Cartography",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Market")),
+    unit_bonuses: [(
+    	bonus: (incr: (stats: (sight: 1)))
+    )]
+), (
+    id: (15),
+    name: "Trading",
+    level: 1,
+    cost: (food: 95, gold: 280),
+    require: Unit(Name("Market")),
+    unit_bonuses: [(
+    	bonus: (trade: 1)
+    )]
+), (
+    id: (16),
+    name: "Coniage",
+    level: 1,
+    cost: (food: 125, gold: 375),
+    require: Unit(Name("Market")),
+    unit_bonuses: [(
+    	bonus: (perc: (resources: (produces: (gold: 10))))
+    )]
+), (
+    id: (17),
+    name: "Town Patrol",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Town Center")),
+    unit_bonuses: [(
+		affects: Unit(Name("Town Center")),
+    	bonus: (incr: (stats: (sight: 2)), perc: (stats: (defence: 20)))
+    )]
+), (
+    id: (18),
+    name: "Hand Cart",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Town Center")),
+    unit_bonuses: [(
+		affects: Class(Bld),
+    	bonus: (perc: (resources: (cost: (food: -10, gold: -10))))
+    )]
+), (
+    id: (19),
+    name: "Shaft Mining",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Mine")),
+    unit_bonuses: [(
+		affects: Unit(Name("Mine")),
+    	bonus: (perc: (resources: (produces: (gold: 15))))
+    )]
+), (
+    id: (20),
+    name: "Heavy Plow",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Mine")),
+    unit_bonuses: [(
+    	bonus: (perc: (resources: (produces: (food: 10), cost: (gold: 0))))
+    )]
+), (
+    id: (21),
+    name: "Chain Mail Armor",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Inf), Level(2)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (22),
+    name: "Chain Barding",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Cav), Level(2)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (23),
+    name: "Bodkin Arrow",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Ran), Level(2)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (24),
+    name: "Leather Armor",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Ran), Level(2)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (25),
+    name: "Iron Casting",
+    level: 2,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Or([Class(Inf), Class(Cav)]), Level(2)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (26),
+    name: "Conscription",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Barracks")),
+    unit_bonuses: [(
+		affects: Class(Inf),
+    	bonus: (perc: (resources: (cost: (food: -15, gold: -15))))
+    )]
+), (
+    id: (27),
+    name: "Husbandry",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Stable")),
+    unit_bonuses: [(
+		affects: Class(Cav),
+    	bonus: (perc: (resources: (cost: (food: -15, gold: -15))))
+    )]
+), (
+    id: (28),
+    name: "Archery Tournaments",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Archery Range")),
+    unit_bonuses: [(
+		affects: Class(Ran),
+    	bonus: (perc: (resources: (cost: (food: -15, gold: -15))))
+    )]
+), (
+    id: (29),
+    name: "Mechanics Guild",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Siege Workshop")),
+    unit_bonuses: [(
+		affects: Class(Sie),
+    	bonus: (perc: (resources: (cost: (food: -15, gold: -15))))
+    )]
+), (
+    id: (30),
+    name: "Banking",
+    level: 2,
+    cost: (food: 200, gold: 600),
+    require: Unit(Name("Market")),
+    unit_bonuses: [(
+    	bonus: (trade: 1, perc: (resources: (produces: (gold: 5))))
+    )]
+), (
+    id: (31),
+    name: "Merchant Network",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Market")),
+    trained_from_bonus: [(
+        Name("Market"), (perc: (resources: (cost: (food: -25, gold: -25))))
+    )],
+), (
+    id: (32),
+    name: "Redemption",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Church")),
+    unit_bonuses: [(
+		affects: Or([Unit(Name("Monks")), Unit(Name("Elite Monks"))]),
+    	bonus: (heal: 1)
+    )]
+), (
+    id: (33),
+    name: "Fervor",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Church")),
+    unit_bonuses: [(
+		affects: Or([Unit(Name("Monks")), Unit(Name("Elite Monks"))]),
+    	bonus: (convert: 1)
+    )]
+), (
+    id: (34),
+    name: "Sanctity",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("Church")),
+    unit_bonuses: [(
+		affects: Or([Unit(Name("Monks")), Unit(Name("Elite Monks"))]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (35),
+    name: "Murder Holes",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("University")),
+    unit_bonuses: [(
+		affects: Unit(Name("Tower")),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (36),
+    name: "Masonry",
+    level: 2,
+    cost: (food: 150, gold: 450),
+    require: Unit(Name("University")),
+    unit_bonuses: [(
+		affects: Class(Bld),
+    	bonus: (perc: (stats: (defence: 5)))
+    )]
+), (
+    id: (37),
+    name: "Crop Rotation",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Mill")),
+    unit_bonuses: [(
+    	bonus: (perc: (resources: (produces: (food: 10), cost: (gold: 0))))
+    )]
+), (
+    id: (38),
+    name: "Plate Mail",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Inf), Level(3)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (39),
+    name: "Plate Barding",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Cav), Level(3)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (40),
+    name: "Bracers",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Ran), Level(3)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (41),
+    name: "Ring Archer Armor",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Class(Ran), Level(3)]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (42),
+    name: "Blast Furnace",
+    level: 3,
+    cost: (food: 675, gold: 975),
+    require: Unit(Name("Blacksmith")),
+    unit_bonuses: [(
+		affects: And([Or([Class(Inf), Class(Cav)]), Level(3)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+), (
+    id: (43),
+    name: "Arena",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Barracks")),
+), (
+    id: (44),
+    name: "Squires",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Stable")),
+), (
+    id: (45),
+    name: "Flaming Arrows",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Archery Range")),
+    battle_bonuses: [(
+        require_this: Class(Ran),
+        require_opponent: Class(Bld), 
+        bonus: (perc: (stats: (attack: 50)))
+    )],
+), (
+    id: (46),
+    name: "Sappers",
+    level: 3,
+    cost: (food: 300, gold: 900),
+    require: Unit(Name("Castle")),
+    battle_bonuses: [(
+        require_this: Class(Inf),
+        require_opponent: Class(Bld), 
+        bonus: (perc: (stats: (attack: 17)))
+    )],
+), (
+    id: (47),
+    name: "Hoardings",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Castle")),
+    unit_bonuses: [(
+		affects: Unit(Name("Castle")),
+    	bonus: (perc: (stats: (defence: 35)))
+    )]
+), (
+    id: (48),
+    name: "Spies",
+    level: 3,
+    cost: (food: 300, gold: 900),
+    require: Unit(Name("Castle")),
+    // implemented in code: can see all town buildings
+), (
+    id: (49),
+    name: "Guilds",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Market")),
+    unit_bonuses: [(
+    	bonus: (trade: 1, perc: (resources: (produces: (gold: 5))))
+    )]
+), (
+    id: (50),
+    name: "Atonement",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Church")),
+    unit_bonuses: [(
+		affects: Or([Unit(Name("Monks")), Unit(Name("Elite Monks"))]),
+    	bonus: (heal: 1)
+    )]
+), (
+    id: (51),
+    name: "Block Printing",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Church")),
+    unit_bonuses: [(
+		affects: Or([Unit(Name("Monks")), Unit(Name("Elite Monks"))]),
+    	bonus: (convert: 1)
+    )]
+), (
+    id: (52),
+    name: "Illumination",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Church")),
+    unit_bonuses: [(
+		affects: Unit(Name("Church")),
+    	bonus: (perc: (resources: (produces: (gold: 50))))
+    )]
+), (
+    id: (53),
+    name: "Faith",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("Church")),
+    unit_bonuses: [(
+		affects: Or([Unit(Name("Monks")), Unit(Name("Elite Monks"))]),
+    	bonus: (perc: (stats: (defence: 25)))
+    )]
+), (
+    id: (54),
+    name: "Treadmill Crane",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("University")),
+    unit_bonuses: [(
+		affects: Class(Bld),
+    	bonus: (perc: (resources: (cost: (food: -10, gold: -10))))
+    )]
+), (
+    id: (55),
+    name: "Siege Engineers",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("University")),
+), (
+    id: (56),
+    name: "Architecture",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("University")),
+    unit_bonuses: [(
+		affects: Class(Bld),
+    	bonus: (perc: (stats: (defence: 5)))
+    )]
+), (
+    id: (57),
+    name: "Chemistry",
+    level: 3,
+    cost: (food: 250, gold: 750),
+    require: Unit(Name("University")),
+), (
+    id: (58),
+    name: "Ballistics",
+    level: 3,
+    cost: (food: 300, gold: 900),
+    require: Unit(Name("University")),
+    unit_bonuses: [(
+		affects: And([Class(Sie), Stat(Range, GreaterThan, 1)]),
+    	bonus: (perc: (stats: (attack: 25)))
+    )]
+)]

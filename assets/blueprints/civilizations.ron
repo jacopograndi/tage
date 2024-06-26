@@ -1,0 +1,184 @@
+[(
+    id: (0),
+    name: "Mongols",
+    research_discount: (food: 15, gold: 15),
+    unit_bonuses: [(
+        affects: Or([
+            Unit(Name("Stable")), 
+            Unit(Name("Blacksmith")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -75, gold: -75)))),
+    ), (
+        affects: Or([
+            Unit(Name("Scout Cavalry")), 
+            Unit(Name("Light Cavalry")),
+            Unit(Name("Horse Archers")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -10, gold: -10)))),
+    ), (
+        affects: Or([
+            Unit(Name("Knights")), 
+            Unit(Name("Cavaliers")),
+            Unit(Name("Paladins")),
+            Unit(Name("Crossbowmen")),
+            Unit(Name("Arbalests")),
+            Unit(Name("Hand Cannoneers")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: 20, gold: 20)))),
+    )],
+    heroes: [
+        Name("Gengis Khan I"),
+        Name("Gengis Khan II"),
+        Name("Gengis Khan III"),
+        Name("Gengis Khan IV"),
+    ]
+), (
+    id: (1),
+    name: "Saracens",
+    unit_bonuses: [(
+        affects: Unit(Name("Mine")),
+        bonus: (incr: (resources: (produces: (gold: 10)))),
+    ), (
+        affects: Unit(Name("Stable")),
+        bonus: (incr: (resources: (cost: (food: -75, gold: -75)))),
+    ), (
+        affects: Unit(Name("Market")),
+        bonus: (incr: (resources: (cost: (food: -50, gold: -50)))),
+    ), (
+        affects: Or([
+            Unit(Name("Horse Archers")), 
+            Unit(Name("Onagers")),
+            Unit(Name("Bombard Cannons")),
+            Unit(Name("Light Cavalry")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -10, gold: -10)))),
+    ), (
+        affects: Or([
+            Unit(Name("Knights")), 
+            Unit(Name("Cavaliers")),
+            Unit(Name("Paladins")),
+            Unit(Name("Longswordsmen")),
+            Unit(Name("Two Handed Swordsman")),
+            Unit(Name("Champions")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: 20, gold: 20)))),
+    )],
+    heroes: [
+        Name("Saladin I"),
+        Name("Saladin II"),
+        Name("Saladin III"),
+        Name("Saladin IV"),
+    ],
+), (
+    id: (2),
+    name: "Britons",
+    unit_bonuses: [(
+        affects: Unit(Name("Mine")),
+        bonus: (incr: (resources: (produces: (gold: 10)))),
+    ), (
+        affects: Or([
+            Unit(Name("Archery Range")),
+            Unit(Name("Church")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -75, gold: -75)))),
+    ), (
+        affects: Or([
+            Unit(Name("Crossbowmen")), 
+            Unit(Name("Arbalests")),
+            Unit(Name("Longswordsmen")),
+            Unit(Name("Two Handed Swordsman")),
+            Unit(Name("Champions")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -10, gold: -10)))),
+    ), (
+        affects: Or([
+            Unit(Name("Camels")), 
+            Unit(Name("Horse Archers")),
+            Unit(Name("Onagers")),
+            Unit(Name("Bombard Cannons")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: 20, gold: 20)))),
+    )],
+    heroes: [
+        Name("Richard the Lionheart I"),
+        Name("Richard the Lionheart II"),
+        Name("Richard the Lionheart III"),
+        Name("Richard the Lionheart IV"),
+    ]
+), (
+    id: (3),
+    name: "Franks",
+    unit_bonuses: [(
+        affects: Or([
+            Unit(Name("Mill")),
+            Unit(Name("Farm")),
+        ]),
+        bonus: (incr: (resources: (produces: (food: 5)))),
+    ), (
+        affects: Unit(Name("Stable")),
+        bonus: (incr: (resources: (cost: (food: -75, gold: -75)))),
+    ), (
+        affects: Unit(Name("Castle")),
+        bonus: (incr: (resources: (cost: (food: -100, gold: -100)))),
+    ), (
+        affects: Or([
+            Unit(Name("Knights")), 
+            Unit(Name("Cavaliers")),
+            Unit(Name("Paladins")),
+            Unit(Name("Monks")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -10, gold: -10)))),
+    ), (
+        affects: Or([
+            Unit(Name("Camels")), 
+            Unit(Name("Horse Archers")),
+            Unit(Name("Scorpions")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: 20, gold: 20)))),
+    )],
+    heroes: [
+        Name("Joan of Arc I"),
+        Name("Joan of Arc II"),
+        Name("Joan of Arc III"),
+        Name("Joan of Arc IV"),
+    ]
+), (
+    id: (4),
+    name: "Japanese",
+    unit_bonuses: [(
+        affects: Or([
+            Unit(Name("Mill")),
+            Unit(Name("Farm")),
+        ]),
+        bonus: (incr: (resources: (produces: (food: 5)))),
+    ), (
+        affects: Or([
+            Unit(Name("Mill")), 
+            Unit(Name("Mine")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -30, gold: -30)))),
+    ), (
+        affects: Or([
+            Unit(Name("Spearmen")), 
+            Unit(Name("Pikemen")),
+            Unit(Name("Crossbowmen")),
+            Unit(Name("Arbalests")),
+            Unit(Name("Hand Cannoneers")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: -10, gold: -10)))),
+    ), (
+        affects: Or([
+            Unit(Name("Camels")), 
+            Unit(Name("Knights")),
+            Unit(Name("Cavaliers")),
+            Unit(Name("Paladins")),
+        ]),
+        bonus: (incr: (resources: (cost: (food: 20, gold: 20)))),
+    )],
+    heroes: [
+        Name("Minamoto Yoshitsune I"),
+        Name("Minamoto Yoshitsune II"),
+        Name("Minamoto Yoshitsune III"),
+        Name("Minamoto Yoshitsune IV"),
+    ]
+)]

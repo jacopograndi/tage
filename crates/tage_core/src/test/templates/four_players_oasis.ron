@@ -1,0 +1,33 @@
+(
+    path: "../../assets/maps/oasis.txt",
+    players: [(
+        id: (0),
+        color: 0x00ff9500,
+        civilization: Some(Name("Britons")),
+        place_hero: true,
+        controller: Machine(Boulder((variance: 10))),
+        team: None,
+    ), (
+        id: (1),
+        color: 0x00ac0037,
+        civilization: Some(Name("Mongols")),
+        place_hero: true,
+        controller: Machine(Boulder((variance: 10))),
+        team: None,
+    ), (
+        id: (2),
+        color: 0x009fe26c,
+        civilization: Some(Name("Franks")),
+        place_hero: true,
+        controller: Machine(Boulder((variance: 10))),
+        team: None,
+    ), (
+        id: (3),
+        color: 0x003467cc,
+        civilization: Some(Name("Japanese")),
+        place_hero: true,
+        controller: Machine(Boulder((variance: 10))),
+        team: None,
+    )]
+)
+

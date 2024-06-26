@@ -1,0 +1,16 @@
+[package]
+name = "tage"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = ["interface_tui"]
+interface_tui = []
+interface_bevy = []
+
+[dependencies]
+tage_tui = { path = "crates/tage_tui" }
+tage_flow = { path = "crates/tage_flow" }
+
+[workspace]
+members = ["crates/tage_core", "crates/tage_flow", "crates/tage_tui"]

@@ -1,0 +1,151 @@
+[(
+    id: (0),
+    name: "Anti-Cavalry",
+    battle_bonuses: [(
+        require_opponent: Class(Cav), 
+        bonus: (perc: (stats: (attack: 83, defence: 83)), attack_priority: 1)
+    )],
+), (
+    id: (1),
+    name: "Buildings Only",
+    battle_bonuses: [(
+        require_opponent: Or([Class(Cav), Class(Inf), Class(Ran), Class(Sie)]), 
+        bonus: (perc: (stats: (attack: -1000)))
+    )],
+), (
+    id: (2),
+    name: "Causes Fear",
+    battle_bonuses: [(
+        bonus: (perc: (stats: (attack: -33, defence: -33))),
+        target: Opponent,
+    )],
+), (
+    id: (3),
+    name: "Convert",
+    // handled in code: can mark units as converting, at end day there's a chance they switch owner
+), (
+    id: (4),
+    name: "Desert Charge",
+    battle_bonuses: [(
+        require_terrain: [Name("Desert")],
+        bonus: (perc: (stats: (attack: 33))),
+    )],
+), (
+    id: (5),
+    name: "Frenzy",
+    // handled in code: always attacks as if it's at 100 hp
+), (
+    id: (6),
+    name: "Heal",
+    // handled in code: add 20 hp to an adjacent target unit
+), (
+    id: (7),
+    name: "Min Range 2",
+    battle_bonuses: [(
+        require_distance: [(GreaterThan, 2)],
+        bonus: (can_attack: false),
+    )],
+), (
+    id: (8),
+    name: "No Counter",
+    battle_bonuses: [(
+        bonus: (forbid_counterattack: true),
+    )],
+), (
+    id: (9),
+    name: "No Move & Attack",
+    unit_bonuses: [(
+        forbid_attack_after_move: true,
+    )],
+), (
+    id: (10),
+    name: "Plains Charge",
+    battle_bonuses: [(
+        require_terrain: [Name("Plains")],
+        bonus: (perc: (stats: (attack: 33))),
+    )],
+), (
+    id: (11),
+    name: "Rapid Fire",
+    battle_bonuses: [(
+        bonus: (can_attack_twice: true),
+    )],
+), (
+    id: (12),
+    name: "Scares Horses",
+    battle_bonuses: [(
+        require_opponent: Or([
+            Unit(Name("Scout Cavalry")), 
+            Unit(Name("Light Cavalry")), 
+            Unit(Name("Knights")), 
+            Unit(Name("Cavaliers")), 
+            Unit(Name("Paladins")), 
+            Unit(Name("Horse Archers")), 
+            Unit(Name("Heavy Horse Archers"))
+        ]),
+        bonus: (perc: (stats: (attack: 33, defence: 33))),
+    )],
+), (
+    id: (13),
+    name: "Scout",
+    unit_bonuses: [(
+        terrain_movement_cost_override: [
+            (Name("Mountain"), 2), (Name("Hills"), 2), (Name("Swamp"), 2), (Name("Forest"), 2)
+        ]
+    )],
+), (
+    id: (14),
+    name: "Skirmish",
+    battle_bonuses: [(
+        require_opponent: Stat(Sight, LessThan, 2),
+        bonus: (attack_priority: 1),
+    )],
+), (
+    id: (15),
+    name: "Units Only",
+    battle_bonuses: [(
+        require_opponent: Class(Bld),
+        bonus: (perc: (stats: (attack: -1000))),
+    )],
+), (
+    id: (16),
+    name: "Woodsman",
+    battle_bonuses: [(
+        require_terrain: [Name("Plains")],
+        bonus: (perc: (stats: (attack: 33, defence: 33))),
+    )],
+), (
+    id: (17),
+    name: "First Strike",
+    battle_bonuses: [(
+        bonus: (attack_priority: 1),
+    )],
+), (
+    id: (18),
+    name: "Seasoned Veteran",
+    // handled in code: 1 less battle to gain a veterancy rank
+), (
+    id: (19),
+    name: "Zeal",
+    // handled in code: adds 20 health after every fight
+), (
+    id: (20),
+    name: "Volley",
+    // handled in code: 50% more attack when above 50% hp
+), (
+    id: (21),
+    name: "Repair",
+    // handled in code: 50% more attack when above 50% hp
+), (
+    id: (22),
+    name: "Age Up",
+    // handled in code: can age up
+), (
+    id: (23),
+    name: "Trade",
+    // handled in code: can trade
+), (
+    id: (24),
+    name: "Capture",
+    // handled in code: can capture buildings
+)]

@@ -1,0 +1,27 @@
+[package]
+name = "tage_tui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+renet = { version = "0.0.15" }
+tracing = { features = [
+    "max_level_trace",
+    "release_max_level_warn",
+], default-features = false, version = "0.1" }
+crossterm = { features = [
+    "serde",
+], default-features = false, version = "0.27.0" }
+ratatui = { features = [
+    "crossterm",
+], default-features = false, version = "0.26.0" }
+bincode = { version = "2.0.0-rc.3" }
+tracing-subscriber = { features = [
+    "ansi",
+], default-features = false, version = "0.3.0" }
+serde = { version = "1.0.196", default-features = false }
+ron = { version = "=0.9.0-alpha.0" }
+dirs = { version = "5.0.1" }
+
+tage_core = { path = "../tage_core" }
+tage_flow = { path = "../tage_flow" }

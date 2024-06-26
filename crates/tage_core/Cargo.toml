@@ -1,0 +1,20 @@
+[package]
+name = "tage_core"
+version = "0.1.0"
+edition = "2021"
+resolver = "2"
+
+[dependencies]
+tracing = { version = "0.1", features = [
+    "max_level_trace",
+    "release_max_level_warn",
+], default-features = false }
+serde = { version = "1.0.196", features = ["derive"], default-features = false }
+ron = { version = "=0.9.0-alpha.0" }
+bincode = { version = "2.0.0-rc.3" }
+rand = { version = "0.8.5" }
+getrandom = { version = "0.2", features = ["js"] }
+
+[features]
+integration_test = []
+default = []

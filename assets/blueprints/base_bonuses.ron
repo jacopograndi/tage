@@ -1,0 +1,37 @@
+[(
+    require_this: Class(Inf), 
+    require_opponent: Class(Bld), 
+    bonus: (perc: (stats: (attack: 33)))
+), (
+    require_this: Class(Inf), 
+    require_opponent: Class(Sie), 
+    bonus: (perc: (stats: (attack: 33)))
+), (
+    require_this: Class(Cav), 
+    require_opponent: Class(Inf), 
+    bonus: (perc: (stats: (attack: 33)))
+), (
+    require_this: Class(Cav), 
+    require_opponent: Class(Ran), 
+    bonus: (perc: (stats: (attack: 33)))
+), (
+    require_this: Class(Cav), 
+    require_opponent: Class(Bld), 
+    bonus: (perc: (stats: (attack: -50)))
+), (
+    require_this: Class(Cav), 
+    bonus: (terrain_movement_cost_override: [(Name("Swamp"), 100)]),
+), (
+    require_this: Class(Ran), 
+    require_opponent: Class(Bld), 
+    bonus: (perc: (stats: (attack: -50)))
+), (
+    require_this: Class(Sie), 
+    require_opponent: Class(Bld), 
+    bonus: (perc: (stats: (attack: 33)))
+), (
+    require_this: Class(Sie), 
+    bonus: (terrain_movement_cost_override: 
+        [(Name("Swamp"), 100), (Name("Ford"), 100), (Name("Mountain"), 100)]
+    ),
+)]

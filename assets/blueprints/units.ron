@@ -1,0 +1,855 @@
+[(
+    header: (id: (0), name: "Villager", glyph: "V", class: Inf, level: 0),
+    stats: (movement: 7, attack: 50, defence: 50, range: 1, sight: 7),
+    resources: (cost: (food: 100, gold: 100)),
+    build_list: [
+        Name("Town Center"), 
+        Name("Mill"),
+        Name("Mine"),
+        Name("Farm"),
+        Name("Barracks"),
+        Name("Archery Range"),
+        Name("Blacksmith"),
+        Name("Market"),
+        Name("Stable"),
+        Name("Siege Workshop"),
+        Name("Church"),
+        Name("University"),
+        Name("Tower"),
+        Name("Castle"),
+        Name("Wonder"),
+    ],
+    abilities: [Name("Repair")]
+), (
+    header: (id: (1), name: "Militia", glyph: "Mil", class: Inf, level: 0),
+    stats: (movement: 7, attack: 100, defence: 100, range: 1, sight: 7),
+    resources: (cost: (food: 75, gold: 25)),
+    upgrades_to: Some(Name("Men at Arms")),
+), (
+    header: (id: (2), name: "Scout Cavalry", glyph: "Sco", class: Cav, level: 0),
+    stats: (movement: 12, attack: 100, defence: 100, range: 1, sight: 7),
+    resources: (cost: (food: 120, gold: 30)),
+    abilities: [Name("Scout")]
+), (
+    header: (id: (3), name: "Archers", glyph: "Arc", class: Ran, level: 1),
+    stats: (movement: 7, attack: 150, defence: 100, range: 3, sight: 7),
+    resources: (cost: (food: 105, gold: 45)),
+    upgrades_to: Some(Name("Elite Archers"))
+), (
+    header: (id: (4), name: "Skirmishers", glyph: "Ski", class: Ran, level: 1),
+    stats: (movement: 7, attack: 110, defence: 110, range: 2, sight: 7),
+    resources: (cost: (food: 95, gold: 40)),
+    upgrades_to: Some(Name("Elite Skirmishers")),
+    abilities: [Name("Skirmish")]
+), (
+    header: (id: (5), name: "Light Cavalry", glyph: "LiC", class: Cav, level: 1),
+    stats: (movement: 10, attack: 150, defence: 150, range: 1, sight: 7),
+    resources: (cost: (food: 140, gold: 35)),
+    upgrades_to: Some(Name("Knights")),
+    abilities: [Name("Plains Charge")]
+), (
+    header: (id: (6), name: "Men at Arms", glyph: "MaA", class: Inf, level: 1),
+    stats: (movement: 7, attack: 150, defence: 150, range: 1, sight: 7),
+    resources: (cost: (food: 95, gold: 30)),
+    upgrades_to: Some(Name("Longswordsmen")),
+), (
+    header: (id: (7), name: "Spearmen", glyph: "Spe", class: Inf, level: 1),
+    stats: (movement: 7, attack: 100, defence: 150, range: 1, sight: 7),
+    resources: (cost: (food: 115, gold: 40)),
+    upgrades_to: Some(Name("Pikemen")),
+    abilities: [Name("Anti-Cavalry")]
+), (
+    header: (id: (8), name: "Knights", glyph: "Kni", class: Cav, level: 2),
+    stats: (movement: 10, attack: 200, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 190, gold: 45)),
+    upgrades_to: Some(Name("Cavaliers")),
+    abilities: [Name("Plains Charge")]
+), (
+    header: (id: (9), name: "Camels", glyph: "Cam", class: Cav, level: 2),
+    stats: (movement: 10, attack: 200, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 200, gold: 50)),
+    upgrades_to: Some(Name("Heavy Camels")),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+), (
+    header: (id: (10), name: "Longswordsmen", glyph: "Lsw", class: Inf, level: 2),
+    stats: (movement: 7, attack: 200, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 130, gold: 45)),
+    upgrades_to: Some(Name("Two Handed Swordsman")),
+), (
+    header: (id: (11), name: "Pikemen", glyph: "Pik", class: Inf, level: 2),
+    stats: (movement: 7, attack: 150, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 160, gold: 55)),
+    upgrades_to: Some(Name("Halberdier")),
+    abilities: [Name("Anti-Cavalry")]
+), (
+    header: (id: (12), name: "Viking Berserkers", glyph: "Vik", class: Inf, level: 2),
+    stats: (movement: 7, attack: 200, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 170, gold: 55)),
+    upgrades_to: Some(Name("Elite Berserkers")),
+    abilities: [Name("Frenzy")]
+), (
+    header: (id: (13), name: "Crossbowmen", glyph: "Xbw", class: Ran, level: 2),
+    stats: (movement: 7, attack: 200, defence: 175, range: 3, sight: 7),
+    resources: (cost: (food: 125, gold: 50)),
+    upgrades_to: Some(Name("Arbalests")),
+    abilities: [Name("No Move & Attack")]
+), (
+    header: (id: (14), name: "Elite Skirmishers", glyph: "ESk", class: Ran, level: 2),
+    stats: (movement: 7, attack: 150, defence: 150, range: 2, sight: 7),
+    resources: (cost: (food: 125, gold: 50)),
+    upgrades_to: Some(Name("Expert Skirmishers")),
+    abilities: [Name("Skirmish")]
+), (
+    header: (id: (15), name: "Horse Archers", glyph: "HAr", class: Ran, level: 2),
+    stats: (movement: 10, attack: 150, defence: 150, range: 2, sight: 7),
+    resources: (cost: (food: 125, gold: 50)),
+    upgrades_to: Some(Name("Heavy Horse Archers")),
+), (
+    header: (id: (16), name: "Persian War Elephants", glyph: "PWE", class: Cav, level: 2),
+    stats: (movement: 7, attack: 200, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 210, gold: 55)),
+    upgrades_to: Some(Name("Elite War Elephants")),
+    abilities: [Name("Causes Fear")]
+), (
+    header: (id: (17), name: "Celtic Woad Raiders", glyph: "CWR", class: Inf, level: 2),
+    stats: (movement: 7, attack: 200, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 200, gold: 65)),
+    upgrades_to: Some(Name("Elite Woad Raiders")),
+    abilities: [Name("Causes Fear")]
+), (
+    header: (id: (18), name: "Knights Templar", glyph: "KnT", class: Cav, level: 2),
+    stats: (movement: 7, attack: 200, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 215, gold: 55)),
+    upgrades_to: Some(Name("Elite Knights Templar")),
+    abilities: [Name("Plains Charge"), Name("Zeal")]
+), (
+    header: (id: (19), name: "Scorpions", glyph: "Sco", class: Sie, level: 2),
+    stats: (movement: 7, attack: 350, defence: 250, range: 3, sight: 7),
+    resources: (cost: (food: 65, gold: 190)),
+    upgrades_to: Some(Name("Heavy Scorpions")),
+    abilities: [Name("Units Only"), Name("No Counter"), Name("No Move & Attack")],
+), (
+    header: (id: (20), name: "Battering Rams", glyph: "Ram", class: Sie, level: 2),
+    stats: (movement: 7, attack: 400, defence: 325, range: 1, sight: 7),
+    resources: (cost: (food: 50, gold: 155)),
+    upgrades_to: Some(Name("Siege Rams")),
+    abilities: [Name("Buildings Only"), Name("No Counter")],
+), (
+    header: (id: (21), name: "Onagers", glyph: "Ona", class: Sie, level: 2),
+    stats: (movement: 7, attack: 275, defence: 275, range: 1, sight: 7),
+    resources: (cost: (food: 60, gold: 180)),
+    abilities: [Name("No Counter"), Name("No Move & Attack")],
+), (
+    header: (id: (22), name: "Monks", glyph: "Mon", class: Inf, level: 2),
+    stats: (movement: 9, attack: 50, defence: 150, range: 1, sight: 7),
+    resources: (cost: (food: 50, gold: 155)),
+    upgrades_to: Some(Name("Elite Monks")),
+    abilities: [Name("Heal"), Name("Convert")],
+), (
+    header: (id: (23), name: "Turkish Janissaries", glyph: "Jan", class: Ran, level: 2),
+    stats: (movement: 7, attack: 250, defence: 175, range: 3, sight: 7),
+    resources: (cost: (food: 145, gold: 60)),
+    upgrades_to: Some(Name("Elite Janissaries")),
+    abilities: [Name("No Move & Attack")],
+), (
+    header: (id: (24), name: "Chinese Chu Ko Nu", glyph: "CKN", class: Ran, level: 2),
+    stats: (movement: 7, attack: 150, defence: 150, range: 3, sight: 7),
+    resources: (cost: (food: 125, gold: 55)),
+    upgrades_to: Some(Name("Elite Chu Ko Nu")),
+    abilities: [Name("No Move & Attack"), Name("Rapid Fire")],
+), (
+    header: (id: (25), name: "Two Handed Swordsman", glyph: "2HS", class: Inf, level: 3),
+    stats: (movement: 7, attack: 250, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 190, gold: 65)),
+), (
+    header: (id: (26), name: "Halberdier", glyph: "Hal", class: Inf, level: 3),
+    stats: (movement: 7, attack: 200, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 230, gold: 75)),
+    abilities: [Name("Anti-Cavalry")]
+), (
+    header: (id: (27), name: "Elite Archers", glyph: "EAr", class: Ran, level: 3),
+    stats: (movement: 7, attack: 200, defence: 200, range: 3, sight: 7),
+    resources: (cost: (food: 205, gold: 90)),
+), (
+    header: (id: (28), name: "Arbalests", glyph: "Arb", class: Ran, level: 3),
+    stats: (movement: 7, attack: 250, defence: 225, range: 3, sight: 7),
+    resources: (cost: (food: 180, gold: 75)),
+    abilities: [Name("No Move & Attack")],
+), (
+    header: (id: (29), name: "Expert Skirmishers", glyph: "ExS", class: Ran, level: 3),
+    stats: (movement: 7, attack: 190, defence: 190, range: 2, sight: 7),
+    resources: (cost: (food: 160, gold: 70)),
+    abilities: [Name("Skirmish")],
+), (
+    header: (id: (30), name: "Heavy Horse Archers", glyph: "HHA", class: Ran, level: 3),
+    stats: (movement: 10, attack: 200, defence: 200, range: 2, sight: 7),
+    resources: (cost: (food: 180, gold: 75)),
+), (
+    header: (id: (31), name: "Cavaliers", glyph: "Cav", class: Cav, level: 3),
+    stats: (movement: 10, attack: 250, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 260, gold: 65)),
+    abilities: [Name("Plains Charge")],
+), (
+    header: (id: (32), name: "Heavy Camels", glyph: "HCm", class: Cav, level: 3),
+    stats: (movement: 10, attack: 250, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 275, gold: 70)),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+), (
+    header: (id: (33), name: "Elite Berserkers", glyph: "EVB", class: Inf, level: 3),
+    stats: (movement: 7, attack: 250, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 235, gold: 80)),
+    abilities: [Name("Frenzy")],
+), (
+    header: (id: (34), name: "Elite Woad Raiders", glyph: "EWR", class: Inf, level: 3),
+    stats: (movement: 7, attack: 250, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 270, gold: 90)),
+    abilities: [Name("Causes Fear")],
+), (
+    header: (id: (35), name: "Trebuchets", glyph: "Tre", class: Sie, level: 3),
+    stats: (movement: 7, attack: 375, defence: 350, range: 3, sight: 7),
+    resources: (cost: (food: 90, gold: 270)),
+    required_tech: [Name("Treadmill Crane")],
+    abilities: [Name("Min Range 2"), Name("No Counter"), Name("No Move & Attack")],
+), (
+    header: (id: (36), name: "Bombard Cannons", glyph: "Bom", class: Sie, level: 3),
+    stats: (movement: 7, attack: 325, defence: 325, range: 3, sight: 7),
+    resources: (cost: (food: 85, gold: 250)),
+    required_tech: [Name("Chemistry")],
+    abilities: [Name("No Counter"), Name("No Move & Attack")],
+), (
+    header: (id: (37), name: "Hand Cannoneers", glyph: "Can", class: Ran, level: 3),
+    stats: (movement: 7, attack: 300, defence: 225, range: 3, sight: 7),
+    resources: (cost: (food: 205, gold: 90)),
+    required_tech: [Name("Chemistry")],
+    abilities: [Name("No Move & Attack")],
+), (
+    header: (id: (38), name: "Champions", glyph: "Cha", class: Inf, level: 3),
+    stats: (movement: 7, attack: 300, defence: 300, range: 1, sight: 7),
+    resources: (cost: (food: 250, gold: 85)),
+    required_tech: [Name("Blast Furnace")],
+), (
+    header: (id: (39), name: "Paladins", glyph: "Pal", class: Cav, level: 3),
+    stats: (movement: 7, attack: 300, defence: 300, range: 1, sight: 7),
+    resources: (cost: (food: 330, gold: 80)),
+    required_tech: [Name("Arena")],
+    abilities: [Name("Plains Charge")],
+), (
+    header: (id: (40), name: "Heavy Scorpions", glyph: "HSc", class: Sie, level: 3),
+    stats: (movement: 7, attack: 400, defence: 300, range: 3, sight: 7),
+    resources: (cost: (food: 95, gold: 265)),
+    required_tech: [Name("Treadmill Crane")],
+    abilities: [Name("Units Only"), Name("No Counter"), Name("No Move & Attack")],
+), (
+    header: (id: (41), name: "Siege Rams", glyph: "SRm", class: Sie, level: 3),
+    stats: (movement: 7, attack: 500, defence: 375, range: 1, sight: 7),
+    resources: (cost: (food: 85, gold: 245)),
+    required_tech: [Name("Treadmill Crane")],
+    abilities: [Name("Buildings Only"), Name("No Counter")],
+), (
+    header: (id: (42), name: "Elite Monks", glyph: "EMo", class: Inf, level: 3),
+    stats: (movement: 9, attack: 50, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 75, gold: 220)),
+    abilities: [Name("Heal"), Name("Convert")],
+), (
+    header: (id: (43), name: "Elite Knights Templar", glyph: "EKT", class: Cav, level: 3),
+    stats: (movement: 10, attack: 250, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 300, gold: 75)),
+    abilities: [Name("Plains Charge"), Name("Zeal")]
+), (
+    header: (id: (44), name: "Elite Janissaries", glyph: "EJa", class: Ran, level: 3),
+    stats: (movement: 7, attack: 300, defence: 225, range: 3, sight: 7),
+    resources: (cost: (food: 205, gold: 90)),
+    abilities: [Name("No Move & Attack")],
+), (
+    header: (id: (45), name: "Elite War Elephants", glyph: "EWE", class: Cav, level: 3),
+    stats: (movement: 7, attack: 250, defence: 300, range: 1, sight: 7),
+    resources: (cost: (food: 290, gold: 75)),
+    abilities: [Name("Causes Fear")]
+), (
+    header: (id: (46), name: "Elite Chu Ko Nu", glyph: "Eck", class: Ran, level: 3),
+    stats: (movement: 7, attack: 200, defence: 200, range: 3, sight: 7),
+    resources: (cost: (food: 180, gold: 75)),
+    abilities: [Name("No Move & Attack"), Name("Rapid Fire")],
+), (
+    header: (id: (47), name: "Throwing Axemen", glyph: "TA", class: Inf, level: 2),
+    stats: (movement: 7, attack: 225, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 125, gold: 50)),
+    upgrades_to: Some(Name("Elite Throwing Axemen")),
+    abilities: [Name("Skirmish"), Name("Woodsman")],
+    required_civilization: [Name("Franks")],
+), (
+    header: (id: (48), name: "Elite Throwing Axemen", glyph: "ETA", class: Inf, level: 3),
+    stats: (movement: 7, attack: 275, defence: 300, range: 1, sight: 7),
+    resources: (cost: (food: 295, gold: 95)),
+    abilities: [Name("Skirmish"), Name("Woodsman")],
+    required_civilization: [Name("Franks")],
+), (
+    header: (id: (49), name: "Samurai", glyph: "Sam", class: Inf, level: 2),
+    stats: (movement: 9, attack: 250, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 215, gold: 70)),
+    abilities: [Name("Seasoned Veteran")],
+    required_civilization: [Name("Japanese")],
+), (
+    header: (id: (50), name: "Elite Samurai", glyph: "ESa", class: Inf, level: 3),
+    stats: (movement: 9, attack: 300, defence: 300, range: 1, sight: 7),
+    resources: (cost: (food: 280, gold: 85)),
+    abilities: [Name("Seasoned Veteran")],
+    required_civilization: [Name("Japanese")],
+), (
+    header: (id: (51), name: "Mamelukes", glyph: "Mam", class: Cav, level: 2),
+    stats: (movement: 10, attack: 250, defence: 200, range: 1, sight: 7),
+    resources: (cost: (food: 225, gold: 55)),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+    required_civilization: [Name("Saracens")],
+), (
+    header: (id: (52), name: "Elite Mamelukes", glyph: "EMa", class: Cav, level: 3),
+    stats: (movement: 10, attack: 300, defence: 250, range: 1, sight: 7),
+    resources: (cost: (food: 295, gold: 60)),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+    required_civilization: [Name("Saracens")],
+), (
+    header: (id: (53), name: "Longbowman", glyph: "LB", class: Ran, level: 2),
+    stats: (movement: 7, attack: 225, defence: 150, range: 3, sight: 7),
+    resources: (cost: (food: 185, gold: 80)),
+    abilities: [Name("Volley")],
+    required_civilization: [Name("Britons")],
+), (
+    header: (id: (54), name: "Elite Longbowman", glyph: "ELB", class: Ran, level: 3),
+    stats: (movement: 7, attack: 275, defence: 200, range: 3, sight: 7),
+    resources: (cost: (food: 245, gold: 95)),
+    abilities: [Name("Volley")],
+    required_civilization: [Name("Britons")],
+), (
+    header: (id: (55), name: "Manguidai", glyph: "Mng", class: Ran, level: 2),
+    stats: (movement: 10, attack: 150, defence: 150, range: 2, sight: 7),
+    resources: (cost: (food: 190, gold: 80)),
+    abilities: [Name("First Strike")],
+    required_civilization: [Name("Mongols")],
+), (
+    header: (id: (56), name: "Elite Manguidai", glyph: "EMg", class: Ran, level: 3),
+    stats: (movement: 10, attack: 200, defence: 200, range: 2, sight: 7),
+    resources: (cost: (food: 250, gold: 95)),
+    abilities: [Name("First Strike")],
+    required_civilization: [Name("Mongols")],
+), (
+    header: (id: (100), name: "Town Center", glyph: "T", class: Bld, level: 0),
+    stats: (defence: 500, sight: 10),
+    resources: (produces: (food: 30, gold: 25), cost: (food: 600, gold: 400)),
+    train_list: [Name("Villager")],
+    defence_bonus_to_unit_on_top: 20,
+    abilities: [Name("Age Up"), Name("Trade"), Name("Capture")],
+    build_constraints: [
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Forest")),
+        DistanceFrom(Name("Town Center"), GreaterThan, 4),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (101), name: "Mill", glyph: "F", class: Bld, level: 0),
+    stats: (defence: 250, sight: 7),
+    resources: (produces: (food: 50, gold: 0), cost: (food: 120, gold: 90)),
+    abilities: [Name("Capture")],
+    defence_bonus_to_unit_on_top: 20,
+        build_constraints: [
+        OnTerrain(Name("Plains")),
+        OnlyOnFoodResource
+    ],
+), (
+    header: (id: (102), name: "Mine", glyph: "M", class: Bld, level: 0),
+    stats: (defence: 300, sight: 7),
+    resources: (produces: (food: 0, gold: 150), cost: (food: 360, gold: 240)),
+    defence_bonus_to_unit_on_top: 20,
+        build_constraints: [
+        OnTerrain(Name("Hills")), 
+        OnTerrain(Name("Mountain")), 
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Plains")),
+        OnlyOnGoldResource
+    ],
+), (
+    header: (id: (103), name: "Farm", glyph: "f", class: Bld, level: 0),
+    stats: (defence: 100, sight: 7),
+    resources: (produces: (food: 50, gold: 0), cost: (food: 90, gold: 60)),
+    defence_bonus_to_unit_on_top: 10,
+        build_constraints: [
+        IsAdjacentTo(Name("Mill")), 
+        OnTerrain(Name("Plains")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (104), name: "Barracks", glyph: "B", class: Bld, level: 0),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 360, gold: 240)),
+    train_list: [
+        Name("Militia"),
+        Name("Men at Arms"),
+        Name("Spearmen"),
+        Name("Longswordsmen"),
+        Name("Pikemen"),
+        Name("Two Handed Swordsman"),
+        Name("Halberdier"),
+        Name("Champions")
+    ],
+    defence_bonus_to_unit_on_top: 20,
+    build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Forest")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (105), name: "Archery Range", glyph: "A", class: Bld, level: 1),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 360, gold: 240)),
+    train_list: [
+        Name("Archers"), 
+        Name("Skirmishers"),
+        Name("Crossbowmen"), 
+        Name("Elite Skirmishers"), 
+        Name("Horse Archers"),
+        Name("Archers"), 
+        Name("Elite Archers"),
+        Name("Arbalests"),
+        Name("Expert Skirmishers"),
+        Name("Heavy Horse Archers"),
+        Name("Hand Cannoneers")
+    ],
+    defence_bonus_to_unit_on_top: 20,
+    build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Forest")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (106), name: "Blacksmith", glyph: "b", class: Bld, level: 1),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 285, gold: 165)),
+    defence_bonus_to_unit_on_top: 20,
+        build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Forest")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (107), name: "Market", glyph: "m", class: Bld, level: 1),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 360, gold: 240)),
+    defence_bonus_to_unit_on_top: 20,
+    abilities: [Name("Trade")],
+    train_cost_bonus: (incr: (resources: (gold: 50))),
+    train_list: [
+        Name("Men at Arms"),
+        Name("Spearmen"),
+        Name("Longswordsmen"),
+        Name("Pikemen"),
+        Name("Two Handed Swordsman"),
+        Name("Halberdier"),
+        Name("Archers"), 
+        Name("Skirmishers"),
+        Name("Crossbowmen"), 
+        Name("Elite Skirmishers"), 
+        Name("Horse Archers"),
+        Name("Archers"), 
+        Name("Elite Archers"),
+        Name("Arbalests"),
+        Name("Expert Skirmishers"),
+        Name("Heavy Horse Archers"),
+        Name("Hand Cannoneers"),
+        Name("Scout Cavalry"), 
+        Name("Light Cavalry"), 
+        Name("Knights"),
+        Name("Camels"),
+        Name("Cavaliers"),
+        Name("Heavy Camels"),
+        Name("Scorpions"), 
+        Name("Battering Rams"), 
+        Name("Onagers"), 
+        Name("Bombard Cannons"),
+        Name("Heavy Scorpions"),
+        Name("Siege Rams"),
+        Name("Knights Templar"),
+        Name("Turkish Janissaries"),
+        Name("Persian War Elephants"),
+        Name("Celtic Woad Raiders"),
+        Name("Viking Berserkers"),
+        Name("Chinese Chu Ko Nu"),
+        Name("Elite Knights Templar"),
+        Name("Elite Janissaries"),
+        Name("Elite War Elephants"),
+        Name("Elite Chu Ko Nu"),
+        Name("Elite Woad Raiders"),
+        Name("Elite Berserkers"),
+    ],
+    build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Forest")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (108), name: "Stable", glyph: "S", class: Bld, level: 0),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 360, gold: 240)),
+    train_list: [
+        Name("Scout Cavalry"), 
+        Name("Light Cavalry"), 
+        Name("Knights"),
+        Name("Camels"),
+        Name("Cavaliers"),
+        Name("Heavy Camels"),
+        Name("Paladins")
+    ],
+    defence_bonus_to_unit_on_top: 20,
+    build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Forest")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (109), name: "Siege Workshop", glyph: "W", class: Bld, level: 2),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 450, gold: 300)),
+    train_list: [
+        Name("Scorpions"), 
+        Name("Battering Rams"), 
+        Name("Onagers"), 
+        Name("Bombard Cannons"),
+        Name("Heavy Scorpions"),
+        Name("Siege Rams")
+    ],
+    defence_bonus_to_unit_on_top: 20,
+    build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Forest")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (110), name: "Church", glyph: "C", class: Bld, level: 2),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 450, gold: 300)),
+    train_list: [
+        Name("Monks"), 
+        Name("Elite Monks"),
+    ],
+    defence_bonus_to_unit_on_top: 20,
+    build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Forest")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (111), name: "University", glyph: "U", class: Bld, level: 2),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 450, gold: 300)),
+    defence_bonus_to_unit_on_top: 20,
+        build_constraints: [
+        IsAdjacentTo(Name("Town Center")), 
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Forest")),
+        OnTerrain(Name("Desert")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (112), name: "Tower", glyph: "I", class: Bld, level: 1),
+    stats: (defence: 300, sight: 7),
+    resources: (cost: (food: 360, gold: 240)),
+    defence_bonus_to_unit_on_top: 40,
+    defence_bonus_to_adjacent_buildings: 25,
+        build_constraints: [
+        IsDiagonalTo(Name("Town Center")),
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Forest")),
+        OnTerrain(Name("Desert")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (113), name: "Castle", glyph: "K", class: Bld, level: 2),
+    stats: (defence: 750, sight: 7),
+    resources: (cost: (food: 900, gold: 600)),
+    train_list: [
+        Name("Longswordsmen"), 
+        Name("Two Handed Swordsman"), 
+        Name("Throwing Axemen"),
+        Name("Elite Throwing Axemen"),
+        Name("Samurai"), 
+        Name("Elite Samurai"),
+        Name("Mamelukes"),
+        Name("Elite Mamelukes"),
+        Name("Longbowman"), 
+        Name("Elite Longbowman"), 
+        Name("Manguidai"), 
+        Name("Elite Manguidai"),
+        Name("Trebuchets"),
+    ],
+    defence_bonus_to_unit_on_top: 40,
+    unit_size: (size: 2),
+    build_constraints: [
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Forest")),
+        OnTerrain(Name("Desert")),
+        OnTerrain(Name("Mountain")),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (114), name: "Wonder", glyph: "W", class: Bld, level: 3),
+    stats: (defence: 1500, sight: 7),
+    resources: (cost: (food: 2400, gold: 1600), produces: (food: 125, gold: 125)),
+    defence_bonus_to_unit_on_top: 20,
+    unit_size: (size: 2),
+        build_constraints: [
+        OnTerrain(Name("Plains")),
+        OnTerrain(Name("Hills")),
+        OnTerrain(Name("Forest")),
+        OnTerrain(Name("Desert")),
+        NumberOf(Name("Wonder"), LessThan, 2),
+        NotOnFoodResource, 
+        NotOnGoldResource
+    ],
+), (
+    header: (id: (200), name: "Richard the Lionheart I", glyph: "RL1", class: Cav, level: 0),
+    stats: (movement: 10, attack: 200, defence: 280, range: 1, sight: 7),
+    abilities: [Name("Plains Charge")],
+    upgrades_to: Some(Name("Richard the Lionheart II")),
+    powers: [
+        Name("Reckless and Fierce"),
+        Name("Superb Leader"),
+        Name("Recruiting for the Cause"),
+        Name("Firing Line"),
+    ],
+), (
+    header: (id: (201), name: "Richard the Lionheart II", glyph: "RL2", class: Cav, level: 1),
+    stats: (movement: 10, attack: 250, defence: 320, range: 1, sight: 7),
+    upgrades_to: Some(Name("Richard the Lionheart III")),
+    abilities: [Name("Plains Charge")],
+    powers: [
+        Name("Reckless and Fierce"),
+        Name("Superb Leader"),
+        Name("Recruiting for the Cause"),
+        Name("Firing Line"),
+    ],
+), (
+    header: (id: (202), name: "Richard the Lionheart III", glyph: "RL3", class: Cav, level: 2),
+    stats: (movement: 10, attack: 300, defence: 360, range: 1, sight: 7),
+    upgrades_to: Some(Name("Richard the Lionheart IV")),
+    abilities: [Name("Plains Charge")],
+    powers: [
+        Name("Reckless and Fierce"),
+        Name("Superb Leader"),
+        Name("Recruiting for the Cause"),
+        Name("Firing Line"),
+    ],
+), (
+    header: (id: (203), name: "Richard the Lionheart IV", glyph: "RL4", class: Cav, level: 3),
+    stats: (movement: 10, attack: 350, defence: 400, range: 1, sight: 7),
+    abilities: [Name("Plains Charge")],
+    powers: [
+        Name("Reckless and Fierce"),
+        Name("Superb Leader"),
+        Name("Recruiting for the Cause"),
+        Name("Firing Line"),
+    ],
+), (
+    header: (id: (205), name: "Joan of Arc I", glyph: "JA1", class: Inf, level: 0),
+    stats: (movement: 7, attack: 200, defence: 350, range: 1, sight: 7),
+    upgrades_to: Some(Name("Joan of Arc II")),
+    powers: [
+        Name("Inspiration"),
+        Name("Divine Purpose"),
+        Name("Blinding Faith"),
+        Name("Weakened Resolve"),
+    ],
+), (
+    header: (id: (206), name: "Joan of Arc II", glyph: "JA2", class: Inf, level: 1),
+    stats: (movement: 7, attack: 250, defence: 400, range: 1, sight: 7),
+    upgrades_to: Some(Name("Joan of Arc III")),
+    powers: [
+        Name("Inspiration"),
+        Name("Divine Purpose"),
+        Name("Blinding Faith"),
+        Name("Weakened Resolve"),
+    ],
+), (
+    header: (id: (207), name: "Joan of Arc III", glyph: "JA3", class: Inf, level: 2),
+    stats: (movement: 7, attack: 300, defence: 450, range: 1, sight: 7),
+    upgrades_to: Some(Name("Joan of Arc IV")),
+    powers: [
+        Name("Inspiration"),
+        Name("Divine Purpose"),
+        Name("Blinding Faith"),
+        Name("Weakened Resolve"),
+    ],
+), (
+    header: (id: (208), name: "Joan of Arc IV", glyph: "JA4", class: Inf, level: 3),
+    stats: (movement: 7, attack: 350, defence: 500, range: 1, sight: 7),
+    powers: [
+        Name("Inspiration"),
+        Name("Divine Purpose"),
+        Name("Blinding Faith"),
+        Name("Weakened Resolve"),
+    ],
+), (
+    header: (id: (210), name: "Minamoto Yoshitsune I", glyph: "MY1", class: Inf, level: 0),
+    stats: (movement: 7, attack: 160, defence: 315, range: 1, sight: 7),
+    upgrades_to: Some(Name("Minamoto Yoshitsune II")),
+    abilities: [Name("Anti-Cavalry")],
+    powers: [
+        Name("Pillage"),
+        Name("Warrior Code"),
+        Name("Minamoto's Guard"),
+        Name("Inspiring General"),
+    ],
+), (
+    header: (id: (211), name: "Minamoto Yoshitsune II", glyph: "MY2", class: Inf, level: 1),
+    stats: (movement: 7, attack: 200, defence: 360, range: 1, sight: 7),
+    upgrades_to: Some(Name("Minamoto Yoshitsune III")),
+    abilities: [Name("Anti-Cavalry")],
+    powers: [
+        Name("Pillage"),
+        Name("Warrior Code"),
+        Name("Minamoto's Guard"),
+        Name("Inspiring General"),
+    ],
+), (
+    header: (id: (212), name: "Minamoto Yoshitsune III", glyph: "MY3", class: Inf, level: 2),
+    stats: (movement: 7, attack: 240, defence: 405, range: 1, sight: 7),
+    upgrades_to: Some(Name("Minamoto Yoshitsune IV")),
+    abilities: [Name("Anti-Cavalry")],
+    powers: [
+        Name("Pillage"),
+        Name("Warrior Code"),
+        Name("Minamoto's Guard"),
+        Name("Inspiring General"),
+    ],
+), (
+    header: (id: (213), name: "Minamoto Yoshitsune IV", glyph: "MY4", class: Inf, level: 3),
+    stats: (movement: 7, attack: 280, defence: 450, range: 1, sight: 7),
+    abilities: [Name("Anti-Cavalry")],
+    powers: [
+        Name("Pillage"),
+        Name("Warrior Code"),
+        Name("Minamoto's Guard"),
+        Name("Inspiring General"),
+    ],
+), (
+    header: (id: (215), name: "Gengis Khan I", glyph: "GK1", class: Ran, level: 0),
+    stats: (movement: 10, attack: 140, defence: 245, range: 2, sight: 7),
+    upgrades_to: Some(Name("Gengis Khan II")),
+    abilities: [Name("First Strike")],
+    powers: [
+        Name("Patron of the Arts"),
+        Name("Nomadic Travelers"),
+        Name("Overwhelming Siege"),
+        Name("Mongol Terror"),
+    ],
+), (
+    header: (id: (216), name: "Gengis Khan II", glyph: "GK2", class: Ran, level: 1),
+    stats: (movement: 10, attack: 175, defence: 280, range: 2, sight: 7),
+    upgrades_to: Some(Name("Gengis Khan III")),
+    abilities: [Name("First Strike")],
+    powers: [
+        Name("Patron of the Arts"),
+        Name("Nomadic Travelers"),
+        Name("Overwhelming Siege"),
+        Name("Mongol Terror"),
+    ],
+), (
+    header: (id: (217), name: "Gengis Khan III", glyph: "GK3", class: Ran, level: 2),
+    stats: (movement: 10, attack: 245, defence: 350, range: 2, sight: 7),
+    upgrades_to: Some(Name("Gengis Khan IV")),
+    abilities: [Name("First Strike")],
+    powers: [
+        Name("Patron of the Arts"),
+        Name("Nomadic Travelers"),
+        Name("Overwhelming Siege"),
+        Name("Mongol Terror"),
+    ],
+), (
+    header: (id: (218), name: "Gengis Khan IV", glyph: "GK4", class: Ran, level: 3),
+    stats: (movement: 10, attack: 245, defence: 350, range: 2, sight: 7),
+    abilities: [Name("First Strike")],
+    powers: [
+        Name("Patron of the Arts"),
+        Name("Nomadic Travelers"),
+        Name("Overwhelming Siege"),
+        Name("Mongol Terror"),
+    ],
+), (
+    header: (id: (220), name: "Saladin I", glyph: "SA1", class: Cav, level: 0),
+    stats: (movement: 10, attack: 180, defence: 280, range: 1, sight: 7),
+    upgrades_to: Some(Name("Saladin II")),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+    powers: [
+        Name("Benefactor"),
+        Name("Rain of Arrows"),
+        Name("Aura of Invincibility"),
+        Name("Hit and Run"),
+    ],
+), (
+    header: (id: (221), name: "Saladin II", glyph: "SA2", class: Cav, level: 1),
+    stats: (movement: 10, attack: 225, defence: 320, range: 1, sight: 7),
+    upgrades_to: Some(Name("Saladin III")),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+    powers: [
+        Name("Benefactor"),
+        Name("Rain of Arrows"),
+        Name("Aura of Invincibility"),
+        Name("Hit and Run"),
+    ],
+), (
+    header: (id: (222), name: "Saladin III", glyph: "SA3", class: Cav, level: 2),
+    stats: (movement: 10, attack: 270, defence: 360, range: 1, sight: 7),
+    upgrades_to: Some(Name("Saladin IV")),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+    powers: [
+        Name("Benefactor"),
+        Name("Rain of Arrows"),
+        Name("Aura of Invincibility"),
+        Name("Hit and Run"),
+    ],
+), (
+    header: (id: (223), name: "Saladin IV", glyph: "SA4", class: Cav, level: 3),
+    stats: (movement: 10, attack: 315, defence: 400, range: 1, sight: 7),
+    abilities: [Name("Desert Charge"), Name("Scares Horses")],
+    powers: [
+        Name("Benefactor"),
+        Name("Rain of Arrows"),
+        Name("Aura of Invincibility"),
+        Name("Hit and Run"),
+    ],
+)]
