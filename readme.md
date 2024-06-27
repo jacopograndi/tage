@@ -4,7 +4,7 @@ This is a game based on an [old nds game](https://en.wikipedia.org/wiki/Age_of_E
 
 It's played with a terminal user interface, later on i will add a graphical one.
 
-![](https://github.com/jacopograndi/tage/demo.gif)
+![](https://github.com/jacopograndi/tage/blob/main/demo.gif)
 
 The game features:
 - All Empire Maps
