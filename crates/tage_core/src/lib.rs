@@ -3,6 +3,8 @@
 //! Activate the feature `integration_test` to test full games, it's disabled by default
 //! as it is very slow.
 
+use std::env;
+
 pub mod prelude;
 
 pub mod actions;
@@ -22,4 +24,13 @@ mod test;
 /// and setting as the default value fields if during deserialization the field is not present.
 fn is_default<T: Default + PartialEq>(t: &T) -> bool {
     t == &T::default()
+}
+
+/// Assets path can be specified at runtime with an env variable. Defaults to assets
+pub fn get_assets_dir() -> String {
+    if let Ok(assets_path) = env::var("TAGE_ASSETS") {
+        assets_path
+    } else {
+        format!("assets")
+    }
 }

@@ -4,8 +4,11 @@ use std::io::{self};
 
 use ron::error::SpannedError;
 
+use crate::get_assets_dir;
+
 use super::*;
 
+/// Used only in development, in release builds use `get_assets_dir`
 pub const BLUEPRINTS_PATH: &str = "assets/blueprints/";
 
 #[derive(Debug, Clone, PartialEq, Eq, Default)]
@@ -48,7 +51,7 @@ fn read_file(path: &str) -> Result<String, BlueprintLoadError> {
 
 impl Blueprints {
     pub fn from_assets() -> Result<Self, BlueprintLoadError> {
-        Blueprints::from_assets_location(BLUEPRINTS_PATH)
+        Blueprints::from_assets_location(&format!("{}/blueprints", get_assets_dir()))
     }
 
     pub fn from_assets_location(base_path: &str) -> Result<Self, BlueprintLoadError> {

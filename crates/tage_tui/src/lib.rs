@@ -17,7 +17,7 @@ use std::{
     sync::Arc,
     time::{Instant, SystemTime, UNIX_EPOCH},
 };
-use tage_core::prelude::*;
+use tage_core::{get_assets_dir, prelude::*};
 use tage_flow::StartFlow;
 use tracing::{info, Level};
 use tracing_subscriber::{self};
@@ -89,7 +89,8 @@ pub fn game_main(flow: StartFlow) -> io::Result<()> {
 
     if let Ok(grid) = load_map(
         &bp,
-        &MapSettings::default().with_path("assets/maps/riverland.txt".to_string()),
+        &MapSettings::default().with_path(
+            format!("{}/assets/riverland.txt", get_assets_dir())),
     ) {
         interface_state.background_board = Some(Board {
             grid,

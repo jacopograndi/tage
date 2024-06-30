@@ -1,5 +1,5 @@
 (
-    path: "assets/maps/corner_kingdoms.txt",
+    path: "maps/corner_kingdoms.txt",
     players: [(
         id: (0),
         color: 0x00ff9500,

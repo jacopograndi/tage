@@ -1,6 +1,5 @@
 (
-    //path: "assets/maps/archipelago_small.txt",
-    path: "assets/maps/test.txt",
+    path: "maps/test.txt",
     players: [(
         id: (0),
         color: 0x00aa0000,

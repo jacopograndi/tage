@@ -28,7 +28,8 @@ pub struct LobbySelectMap {
 
 impl LobbySelectMap {
     pub fn new(bp: &Blueprints, players: Vec<Player>, path: &str) -> Self {
-        let paths = fs::read_dir("./assets/maps/").unwrap();
+        tracing::trace!("{}", format!("{}/maps/", get_assets_dir()));
+        let paths = fs::read_dir(format!("{}/maps/", get_assets_dir())).unwrap();
 
         let mut choices: Vec<(String, Board)> = paths
             .filter_map(|path| {
