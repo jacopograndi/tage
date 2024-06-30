@@ -80,7 +80,16 @@ pub fn game_main(flow: StartFlow) -> io::Result<()> {
         StartFlow::LocalNewMap {
             settings: map_settings,
         } => (
-            Some(setup_gamestate(map_settings, &bp).unwrap()),
+            Some(
+                setup_gamestate(
+                    MapSettings {
+                        path: format!("{}/{}", get_assets_dir(), map_settings.path),
+                        ..map_settings
+                    },
+                    &bp,
+                )
+                .unwrap(),
+            ),
             InterfaceState::default(),
         ),
     };
@@ -89,8 +98,7 @@ pub fn game_main(flow: StartFlow) -> io::Result<()> {
 
     if let Ok(grid) = load_map(
         &bp,
-        &MapSettings::default().with_path(
-            format!("{}/assets/riverland.txt", get_assets_dir())),
+        &MapSettings::default().with_path(format!("{}/assets/riverland.txt", get_assets_dir())),
     ) {
         interface_state.background_board = Some(Board {
             grid,

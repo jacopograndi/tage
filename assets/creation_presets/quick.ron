@@ -1,5 +1,5 @@
 (
-    path: "maps/test.txt",
+    path: "maps/moats.txt",
     players: [(
         id: (0),
         color: 0x00aa0000,
